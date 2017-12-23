@@ -24,6 +24,7 @@ class Layout extends Component {
   }
 
   render() {
+    console.log("g")
     return (
       this.showContent()
     )
