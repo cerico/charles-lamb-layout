@@ -43,7 +43,7 @@ const Header = () => {
           <nav>
             <ul style={navItems}>
               <li style={navItem}>
-                <Link to="/">diagnostics</Link>
+                <Link to="/">Hello Cards</Link>
               </li>
               <li style={navItem}>
                 <Link to="/about">about</Link>
