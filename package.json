@@ -21,11 +21,11 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.7",
     "node-sass": "^4.7.2",
-    "react": "^15.5.4",
+    "react": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "webpack": "^2.7.0"
+    "webpack": "^3.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
