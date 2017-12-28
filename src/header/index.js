@@ -5,8 +5,9 @@ import styles from './header.css';
 
 const classNames = require('classnames');
 
-const Header = () => {
-
+const Header = ({links}) => {
+  console.log("e",links)
+  console.log(links[0].path)
 	const leftCorner = classNames(styles.leftCorner, styles.box)
   const rightCorner = classNames(styles.rightCorner, styles.box)
   
@@ -42,12 +43,11 @@ const Header = () => {
         <div style={bar}>
           <nav>
             <ul style={navItems}>
-              <li style={navItem}>
-                <Link to="/">Hello Cards</Link>
+            {links.map((link,i) => {
+              return <li key={i} style={navItem}>
+                <Link to={link.path}>{link.title}</Link>
               </li>
-              <li style={navItem}>
-                <Link to="/about">about</Link>
-              </li>
+            })}
             </ul>
           </nav>
         </div>

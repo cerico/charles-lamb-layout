@@ -10,15 +10,15 @@ const classNames = require('classnames');
 
 class Layout extends Component {
 
-
+  
 
   showContent() {
-    console.log(this.props)
-    
+
     return (
+      
       <div className={styles.container}>
         <Sidebar sideText="diagnostics"/>
-          <Header/>
+          <Header links={this.props.links}/>
       </div>
     )
   }

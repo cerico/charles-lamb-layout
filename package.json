@@ -1,6 +1,6 @@
 {
   "name": "charles-lamb-layout",
-  "version": "0.0.1",
+  "version": "0.0.12",
   "description": "Put a description here",
   "main": "build/index.js",
   "peerDependencies": {
