@@ -5,9 +5,8 @@ import styles from './header.css';
 
 const classNames = require('classnames');
 
-const Header = ({links}) => {
-  console.log("e",links)
-  console.log(links[0].path)
+const Header = ({links,scheme}) => {
+
 	const leftCorner = classNames(styles.leftCorner, styles.box)
   const rightCorner = classNames(styles.rightCorner, styles.box)
   
@@ -15,7 +14,7 @@ const Header = ({links}) => {
     "padding": "36px 120px 120px"
   }
   const navItem = {
-    fontFamily: 'raleway',
+    fontFamily: scheme.font,
     display: 'inline-block',
     paddingLeft: '1.38889%',
     paddingRight: '1.38889%',
@@ -32,11 +31,17 @@ const Header = ({links}) => {
   }
 
   const flex = {
-    display:'flex'
+    display:'flex',
+    backgroundColor: scheme.bg
   }
   const bar = {
     width:'90%'
   }
+  const fg = {
+    color:scheme.fg
+  }
+ 
+ 
 
 	return (
 		<header style={flex}>
@@ -45,7 +50,7 @@ const Header = ({links}) => {
             <ul style={navItems}>
             {links.map((link,i) => {
               return <li key={i} style={navItem}>
-                <Link to={link.path}>{link.title}</Link>
+                <Link style={fg} to={link.path}>{link.title}</Link>
               </li>
             })}
             </ul>

@@ -18,7 +18,7 @@ class Layout extends Component {
       
       <div className={styles.container}>
         <Sidebar sideText="diagnostics"/>
-          <Header links={this.props.links}/>
+          <Header scheme={this.props.scheme} links={this.props.links}/>
       </div>
     )
   }
