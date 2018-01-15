@@ -22,13 +22,18 @@ import Layout from 'charles-lamb-layout';
 
 ### Include
 
-Include in your main react component and pass it the links you want displayed, eg 
+Include in your main react component and pass it the links you want displayed and a colour scheme, eg 
 
 ```
 const links = [
       {path:'/',title:"home",key:1},
       {path:'/checkout',title:"checkout",key:2}
       ]
+const scheme = {
+      bg: 'rgb(246, 235, 213)',
+      fg: '#253248',
+      font: 'raleway'
+    }
 <Layout links={links}/>
 ```
 
@@ -37,14 +42,20 @@ const links = [
 eg with a router, in main App.js
 
 ```
- const links = [
+  const links = [
       {path:'/',title:"home",key:1},
-      {path:'/checkout',title:"checkout",key:2}]
+      {path:'/checkout',title:"checkout",key:2}
+      ]
+  const scheme = {
+      bg: 'rgb(246, 235, 213)',
+      fg: '#253248',
+      font: 'raleway'
+    }
 
     return (
       <Router>
         <main>
-          <Layout links={links}/>
+          <Layout scheme={scheme} links={links}/>
           <div>
             <Switch>
               <Route exact path="/"  component={Products}/>
