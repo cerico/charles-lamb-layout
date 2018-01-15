@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 const classNames = require('classnames');
 
-import Layout from 'charles-lamb';
+import Layout from 'charles-lamb-layout';
 import Products from '../components/Products';
 import About from '../components/About';
 import { getProducts } from '../actions/Products';
@@ -16,10 +16,21 @@ class App extends React.Component  {
   
   render(){
 
+    const links = [
+      { path: "/", title: "home", key: 1 },
+      { path: "/about", title: "about", key: 2 }
+    ];
+
+    const scheme = {
+      bg: 'rgb(246, 235, 213)',
+      fg: '#253248',
+      font: 'raleway'
+    }
+
     return (
       <Router>
         <main>
-          <Route component={Layout}/>
+          <Layout links={links} scheme={scheme }/>
           <div>
             <Switch>
               <Route exact path="/" component={Products} />

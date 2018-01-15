@@ -9,15 +9,10 @@ import ProductItem from './ProductItem';
 class Products extends React.Component  {
 
   render (){
-console.log(this.props)
-    let display
-    this.props.location.pathname === '/' ?
-      display = 'flex' :
-      display = 'flex'
     
     const style = {
       general: {
-        display: display,
+        display: 'flex',
         background:'#323132',
         paddingTop: '5%'
       }

@@ -6,13 +6,11 @@ export const getProducts = () => {
     return fetch(endpoint)
     .then(response => response.json())
     .then(res => dispatch(setProducts(res.products)))
-    // .then(res => dispatch(setProducts(res.products)))
     .catch(error => console.log(error))
   }
 }
 
 export const setProducts = products => {
-  console.log(products)
   return {
     type: 'GET_PRODUCTS_SUCCESS',
     products,

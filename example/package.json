@@ -4,7 +4,7 @@
   "description": "template",
   "main": "server.js",
   "dependencies": {
-    "charles-lamb-layout": "^0.0.12",
+    "charles-lamb-layout": "^0.0.13",
     "express": "^4.16.2",
     "grainy": "^1.0.7",
     "hello-cards": "^0.1.11",

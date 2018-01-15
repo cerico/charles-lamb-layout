@@ -34,7 +34,7 @@ export const setApplications = res => {
       }      
     })
   })
-  console.log(filtered)
+
   return {
     type: 'GET_APPLICATIONS_SUCCESS',
     payload: CardDesigner(filtered)
